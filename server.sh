@@ -1,0 +1,1 @@
+PORT=9991 DATABASE_URL=postgres://nss@localhost/evernode AWS_BUCKET=jj-evernode nodemon server/index.js

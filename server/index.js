@@ -1,11 +1,12 @@
 'use strict';
 
 var Hapi         = require('hapi'),
-  server         = new Hapi.Server('0.0.0.0', process.env.PORT, {cors:{origin: ['http://localhost:8100'],credentials: true}, timeout:{client:60000}}),
+  server         = new Hapi.Server(),
   routes         = require('./routes/config/routes'),
   plugins        = require('./routes/config/plugins'),
   authentication = require('./routes/config/authentication');
 
+server.connection({port:process.env.PORT});
 server.pack.register(plugins, function(){
   server.auth.strategy('session', 'cookie', true, authentication);
   server.route(routes);
@@ -13,3 +14,5 @@ server.pack.register(plugins, function(){
     server.log('info', server.info.uri);
   });
 });
+
+module.exports = server;

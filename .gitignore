@@ -1,3 +1,5 @@
 .idea/
 node_modules/
 public/
+sever.sh
+testing.sh
