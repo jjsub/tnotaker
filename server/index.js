@@ -7,7 +7,7 @@ var Hapi         = require('hapi'),
   authentication = require('./routes/config/authentication');
 
 server.connection({port:process.env.PORT});
-server.pack.register(plugins, function(){
+server.register(plugins, function(){
   server.auth.strategy('session', 'cookie', true, authentication);
   server.route(routes);
   server.start(function(){
