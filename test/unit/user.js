@@ -42,17 +42,24 @@ describe('User', function(){
     });
   });
 
-   describe('.loging', function(){
-    it('Should loging a user', function(done){
-      User.login({username:'Bob', password: '123'} function(user){
-        expect(user.username).to.be.equalnull;
+   describe('.login', function(){
+    it('Should login a user', function(done){
+      User.login({username:'Bob', password: '123'}, function(user){
+        expect(user.username).to.be.equal('Bob');
         done();
       });
     });
-    it('should NOT login a User - bad password', function(done){
-      User.login({username:'wrong', password:'123'} function(user){
-        
-      })
+    it('Should NOT login a User - bad password', function(done){
+      User.login({username:'wrong', password:'123'}, function(user){
+        expect(user).to.be.undefined;
+        done();
+      });
+    });
+    it('Should NOT login a User -bad password', function(done){
+      User.login({username:'Bob', password:'wrong'}, function(user){
+        expect(user).to.be.undefined;
+        done();
+      });
     });
   });
 });
