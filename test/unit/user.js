@@ -11,7 +11,7 @@ var expect     = require('chai').expect,
     describe   = lab.describe,
     it         = lab.it,
     before     = lab.before,
-    db         = h.getDb();
+    db         = h.getDb(),
     beforeEach = lab.beforeEach;
 
 
