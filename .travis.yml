@@ -17,10 +17,10 @@ after_script:
   - npm run coveralls
 env:
   global:
-    -DATABASE_URL=portgres://postgres@localhost/evernode_test
+    - DATABASE_URL=portgres://postgres@localhost/evernode_test
     # AWS_SECRET_ACCESS_KEY
-    -secure: "DOoZXOj5v3YHNAbmIzyLzgSHmuh1nu+CK+J4sAy4ut6NED0JjP/M8TOBl9lOJbpbikbTTgD4RfOY9b+LCH21E07P7W/8SqY8D9Pc0RoSKU4uTaIXce+XgVXq8LUa4YrdD/Oyyq8/KBahs+0aTvgTLDxdH0fcCGpFcHPf22Lzk9c="
+    - secure: "DOoZXOj5v3YHNAbmIzyLzgSHmuh1nu+CK+J4sAy4ut6NED0JjP/M8TOBl9lOJbpbikbTTgD4RfOY9b+LCH21E07P7W/8SqY8D9Pc0RoSKU4uTaIXce+XgVXq8LUa4YrdD/Oyyq8/KBahs+0aTvgTLDxdH0fcCGpFcHPf22Lzk9c="
     # AWS_ACCESS_KEY_ID
-     -secure: "Hv8SQUGf7R1cU5Fbct+5iG7j2/1ogfSSyuUWp4fRuK60/NypUydj8B9FCd98pbAsKLrUsRX6UJ+mPuJCL7Schl4Bwjfsa/d4oWI9QovCz76XC9ltFctZlnZp+xt0IaQD79xJ0kzGpmk5vlyCec0HY4R6kbvJE4bZEdrtxzHTs1M="
-    -AWS_BUCKET=jj-evernode
+    - secure: "Hv8SQUGf7R1cU5Fbct+5iG7j2/1ogfSSyuUWp4fRuK60/NypUydj8B9FCd98pbAsKLrUsRX6UJ+mPuJCL7Schl4Bwjfsa/d4oWI9QovCz76XC9ltFctZlnZp+xt0IaQD79xJ0kzGpmk5vlyCec0HY4R6kbvJE4bZEdrtxzHTs1M="
+    - AWS_BUCKET=jj-evernode
 
